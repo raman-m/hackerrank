@@ -1,5 +1,3 @@
-# HackerRank challenges and solutions
-
-# <img src='https://hrcdn.net/fcore/assets/favicon-ddc852f75a.png' height='100' alt='HackerRank Icon' />
-
+<a href='https://www.hackerrank.com/'><img src='../assets/logo-white-fill.svg?raw=true' width='300' height='55' alt='HackerRank Logo' /></a>
+# Challenges and solutions
 URL: [hackerrank.com](https://www.hackerrank.com/)
