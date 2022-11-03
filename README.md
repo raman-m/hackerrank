@@ -1,5 +1,5 @@
-<a href='https://www.hackerrank.com/'>
-  <img src='../assets/logo.svg?raw=true' width='300' height='55' alt='HackerRank Logo' />
+<a href="https://www.hackerrank.com/">
+  <img src="../assets/logo-black.svg?raw=true" alt="HackerRank Black Logo" />
 </a>
 
 # Challenges and solutions
