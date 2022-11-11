@@ -1,10 +1,13 @@
-namespace HackerRank.Tests;
+using Xunit;
 
-public class Class1Tests
+namespace HackerRank.Tests
 {
-    [Fact]
-    public void Test1()
+    public class Class1Tests
     {
+        [Fact]
+        public void Test1()
+        {
 
+        }
     }
 }

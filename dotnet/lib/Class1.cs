@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HackerRank.Lib;
-
-public class Class1
+namespace HackerRank.Lib
 {
+    public class Class1
+    {
+    }
 }
