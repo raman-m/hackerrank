@@ -3,4 +3,4 @@
 </a>
 
 # Challenges and solutions
-URL: [hackerrank.com](https://www.hackerrank.com/)
+> URL: [hackerrank.com](https://www.hackerrank.com/)
