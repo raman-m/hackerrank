@@ -5,6 +5,8 @@
     <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <AssemblyName>RamanM.HackerRank.Console</AssemblyName>
+    <RootNamespace>RamanM.HackerRank.Console</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

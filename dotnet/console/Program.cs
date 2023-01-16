@@ -1,6 +1,6 @@
-﻿using System;
+﻿using static System.Console;
 
-namespace HackerRank.ConsoleApp
+namespace RamanM.HackerRank.Console
 {
     internal class Program
     {
@@ -16,8 +16,8 @@ namespace HackerRank.ConsoleApp
 #else
             dotnetVer = "lower than .NET 5";
 #endif
-            Console.WriteLine($"Target framework: {dotnetVer}\n");
-            Console.WriteLine("Hello, HackerRankers!");
+            WriteLine($"Target framework: {dotnetVer}\n");
+            WriteLine("Hello, HackerRankers!");
         }
     }
 }

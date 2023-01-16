@@ -1,4 +1,4 @@
-namespace HackerRank.Tests;
+namespace RamanM.HackerRank.Tests;
 
 public class Class1Tests
 {

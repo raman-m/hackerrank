@@ -1,10 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <IsPackable>false</IsPackable>
+    <AssemblyName>RamanM.HackerRank.Tests</AssemblyName>
+    <RootNamespace>RamanM.HackerRank.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
