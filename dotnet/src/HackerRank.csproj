@@ -8,4 +8,9 @@
     <RootNamespace>RamanM.HackerRank</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\..\algorithms\warmup\solve-me-first\README.md" Link="Algorithms\Warmup\SolveMeFirst\README.md" />
+    <Compile Include="..\..\algorithms\warmup\solve-me-first\Solution.cs" Link="Algorithms\Warmup\SolveMeFirst\Solution.cs" />
+  </ItemGroup>
+
 </Project>
