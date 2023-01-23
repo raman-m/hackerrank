@@ -27,4 +27,7 @@
     <ProjectReference Include="..\src\HackerRank.csproj" />
   </ItemGroup>
 
+  <ItemGroup Label="TestCases">
+    <Content Include="..\..\algorithms\warmup\solve-me-first\testcases\**\*.*" Link="Algorithms\Warmup\SolveMeFirst\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
