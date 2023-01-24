@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>RamanM.HackerRank.Helpers</AssemblyName>
+    <RootNamespace>RamanM.HackerRank.Helpers</RootNamespace>
+  </PropertyGroup>
+
+</Project>
