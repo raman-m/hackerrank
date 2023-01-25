@@ -30,8 +30,8 @@ The first line contains an integer **n**, the number of socks represented in **a
 The second line contains **n** space-separated integers, **ar[i]**, the colors of the socks in the pile.
 
 #### Constraints
-- $\begin{flalign} & 1 \leq n \leq 100 & \end{flalign}$
-- $ 1 \leq ar[i] \leq 100 $ where $ 0 \leq i \le n $
+- $1 \leq n \leq 100$
+- $1 \leq ar[i] \leq 100$ where $0 \leq i \lt n$
 
 #### Sample Input
 ```text
