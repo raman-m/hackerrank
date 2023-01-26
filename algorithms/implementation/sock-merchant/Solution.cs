@@ -14,7 +14,7 @@ using System;
 
 namespace RamanM.HackerRank.Algorithms.Implementation.SalesByMatch;
 
-class Result
+public class Result
 {
 
     /*
@@ -28,12 +28,11 @@ class Result
 
     public static int sockMerchant(int n, List<int> ar)
     {
-        throw new NotImplementedException();
+        return -1;
     }
-
 }
 
-class Solution
+public class Solution
 {
     public static void Main(string[] args)
     {

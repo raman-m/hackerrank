@@ -5,3 +5,6 @@ global using System.Text;
 global using System.Threading.Tasks;
 global using Xunit;
 global using RamanM.HackerRank;
+
+namespace RamanM.HackerRank.Tests;
+internal class Root { }

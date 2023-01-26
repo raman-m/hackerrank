@@ -29,5 +29,7 @@
 
   <ItemGroup Label="TestCases">
     <Content Include="..\..\algorithms\warmup\solve-me-first\testcases\**\*.*" Link="Algorithms\Warmup\SolveMeFirst\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+
 </Project>
