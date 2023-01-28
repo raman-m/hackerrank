@@ -28,7 +28,7 @@ public class Result
 
     public static int sockMerchant(int n, List<int> ar)
     {
-        return -1;
+        throw new NotImplementedException();
     }
 }
 
