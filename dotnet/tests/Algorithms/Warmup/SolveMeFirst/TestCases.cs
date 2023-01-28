@@ -2,25 +2,21 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Warmup.SolveMeFirst;
 
-public class TestCases
+[Collection(nameof(TestCases))]
+public class TestCases : TestCase
 {
     [Theory]
     [InlineData("00")]
     [InlineData("01")]
-    public void Solution_SolveMeFirst_SampleTestCaseXX(string code)
+    public void Solution_Main_TestCaseXX(string code)
     {
         // Arrange
-        var basePath = Path.Combine(Environment.CurrentDirectory, "Algorithms\\Warmup\\SolveMeFirst\\");
-        var test = new TestCase(basePath);
-        test.InputPath = $"input\\input{code}.txt";
-        test.OutputPath = $"output\\output{code}.txt";
-        var expected = File.ReadAllText(test.OutputPath);
+        var expected = Setup(code);
 
         // Act
-        test.ActInConsole(() => Solution.Main(Array.Empty<string>()));
+        var actual = ActInConsole(() => Solution.Main(Array.Empty<string>()));
 
         // Assert
-        var actual = File.ReadAllText(test.TestResultPath).Trim(new char[] { '\t', '\n', '\r' });
         Assert.Equal(expected, actual);
     }
 }

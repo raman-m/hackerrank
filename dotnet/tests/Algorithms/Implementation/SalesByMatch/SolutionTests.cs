@@ -2,21 +2,24 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Implementation.SalesByMatch;
 
-public class SolutionTests : UnitTest
+[Collection(nameof(SolutionTests))]
+public class SolutionTests : ConsoleTest
 {
     [Fact]
     public void Main_Example_ReturnsTwoPairs()
     {
         // Arrange
-        var stdin = "7\r\n1 2 1 2 1 3 2";
-        var expected = "2";
+        string nl = Environment.NewLine;
+        var stdin = $"7{nl}1 2 1 2 1 3 2";
+        var expected = "2" + nl;
+        var outputPath = SetupOutput();
 
         // Act TODO Implement call of private class via reflection
-        var actual = ActInConsoleReader(
-            () => Solution.Main(Array.Empty<string>()),
-            stdin, typeof(SolutionTests).Namespace, nameof(Main_Example_ReturnsTwoPairs));
+        Act(() => Solution.Main(Array.Empty<string>()),
+            stdin);
 
         // Assert
+        var actual = Actual(outputPath);
         Assert.Equal(expected, actual);
     }
 
@@ -24,15 +27,17 @@ public class SolutionTests : UnitTest
     public void Main_Sample_ReturnsThreePairs()
     {
         // Arrange
-        var stdin = "9\r\n10 20 20 10 10 30 50 10 20";
-        var expected = "3";
+        string nl = Environment.NewLine;
+        var stdin = $"9{nl}10 20 20 10 10 30 50 10 20";
+        var expected = "3" + nl;
+        var outputPath = SetupOutput();
 
         // Act TODO Implement call of private class via reflection
-        var actual = ActInConsoleReader(
-            () => Solution.Main(Array.Empty<string>()),
-            stdin, typeof(SolutionTests).Namespace, nameof(Main_Sample_ReturnsThreePairs));
+        Act(() => Solution.Main(Array.Empty<string>()),
+            stdin);
 
         // Assert
+        var actual = Actual(outputPath);
         Assert.Equal(expected, actual);
     }
 }

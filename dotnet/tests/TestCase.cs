@@ -1,14 +1,20 @@
-﻿namespace RamanM.HackerRank.Tests;
+﻿using System.Runtime.CompilerServices;
 
-public class TestCase
+namespace RamanM.HackerRank.Tests;
+
+public class TestCase : ConsoleTest
 {
     private const string testCaseDir = "testcases";
-    private readonly string basePath = string.Empty;
+    private string basePath = string.Empty;
 
-    private TestCase() { }
-
-    public TestCase(string basePath)
+    public string Setup(string code)
     {
+        var rootNamespace = typeof(Root).Namespace;
+        var relativePath = GetType().Namespace
+            .Remove(0, rootNamespace.Length)
+            .Remove(0, 1).Replace('.', '\\');
+        var basePath = Path.Combine(Environment.CurrentDirectory, relativePath);
+
         if (!Directory.Exists(basePath))
             throw new DirectoryNotFoundException(basePath);
 
@@ -17,6 +23,12 @@ public class TestCase
             throw new DirectoryNotFoundException(dir);
 
         this.basePath = basePath;
+
+        InputPath = $"input\\input{code}.txt";
+        OutputPath = $"output\\output{code}.txt";
+
+        // Read expected value
+        return File.ReadAllText(OutputPath);
     }
 
     private string _inputFile;
@@ -76,31 +88,30 @@ public class TestCase
         return File.OpenRead(OutputPath);
     }
 
-    public void Act(Action action) => action?.Invoke();
-
-
-    public void ActInConsole(Action action)
+    /// <summary>
+    /// Acts on the specified action and returns actual value from the test result file.
+    /// </summary>
+    /// <remarks>
+    /// <see cref="Console"/> usage: input (overridden), output (overridden via Env variable)
+    /// </remarks>
+    /// <param name="action">SUT action</param>
+    /// <returns>Expected value as string.</returns>
+    public string Act(Action action, [CallerMemberName] string testName = null)
     {
-        try
-        {
-            using var writer = new StreamWriter(TestResultPath); // Attempt to open output file.
-            using var reader = new StreamReader(InputPath);
-            
-            Console.SetOut(writer); // Redirect standard output from the console to the output file.                        
-            Console.SetIn(reader); // Redirect standard input from the console to the input file.
+        SetupOutput(TestResultPath, testName: testName);
+        ActInConsole(action, InputPath);
+        return Actual();
+    }
 
-            action?.Invoke(); // Act
-        }
-        catch (IOException e)
-        {
-            Console.Error.WriteLine(e.Message);
-            throw e;
-        }
-        finally
-        {
-            var standardOutput = new StreamWriter(Console.OpenStandardOutput());
-            standardOutput.AutoFlush = true;
-            Console.SetOut(standardOutput); // Recover the standard output stream 
-        }
+    public string ActInConsole(Action action)
+    {
+        ActInConsole(action, InputPath, TestResultPath);
+        return Actual();
+    }
+
+    private string Actual()
+    {
+        var text = File.ReadAllText(TestResultPath);
+        return text.Trim(new char[] { '\t', '\n', '\r' });
     }
 }
