@@ -2,7 +2,6 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Implementation.SalesByMatch;
 
-[Collection(nameof(SolutionTests))]
 public class SolutionTests : ConsoleTest
 {
     [Fact]

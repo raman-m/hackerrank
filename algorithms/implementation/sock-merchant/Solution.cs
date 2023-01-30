@@ -16,7 +16,6 @@ namespace RamanM.HackerRank.Algorithms.Implementation.SalesByMatch;
 
 public class Result
 {
-
     /*
      * Complete the 'sockMerchant' function below.
      *
@@ -28,7 +27,16 @@ public class Result
 
     public static int sockMerchant(int n, List<int> ar)
     {
-        throw new NotImplementedException();
+        var colors = new Dictionary<int, int>();
+        foreach (int color in ar)
+        {
+            if (!colors.ContainsKey(color))
+                colors[color] = 0;
+
+            colors[color]++;
+        }
+
+        return colors.Sum(count => count.Value / 2);
     }
 }
 

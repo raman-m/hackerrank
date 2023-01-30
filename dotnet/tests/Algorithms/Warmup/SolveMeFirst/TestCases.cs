@@ -3,6 +3,7 @@
 namespace RamanM.HackerRank.Tests.Algorithms.Warmup.SolveMeFirst;
 
 [Collection(nameof(TestCases))]
+[CollectionDefinition(nameof(TestCases), DisableParallelization = true)]
 public class TestCases : TestCase
 {
     [Theory]
