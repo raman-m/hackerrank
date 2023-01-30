@@ -9,12 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\algorithms\warmup\solve-me-first\HackerRank.md" Link="Algorithms\Warmup\SolveMeFirst\HackerRank.md" />
-    <None Include="..\..\algorithms\warmup\solve-me-first\README.md" Link="Algorithms\Warmup\SolveMeFirst\README.md" />
+    <None Include="..\..\algorithms\warmup\solve-me-first\*.md" Link="Algorithms\Warmup\SolveMeFirst\%(FileName)%(Extension)" />
     <SolveMeFirst Include="Algorithms\Warmup\SolveMeFirst\*.*" />
 
-    <None Include="..\..\algorithms\implementation\sock-merchant\HackerRank.md" Link="Algorithms\Implementation\SalesByMatch\HackerRank.md" />
-    <None Include="..\..\algorithms\implementation\sock-merchant\README.md" Link="Algorithms\Implementation\SalesByMatch\README.md" />
+    <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
   </ItemGroup>
 
