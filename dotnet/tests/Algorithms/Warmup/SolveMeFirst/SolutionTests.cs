@@ -2,6 +2,8 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Warmup.SolveMeFirst;
 
+[Collection(nameof(SolutionTests))]
+[CollectionDefinition(nameof(SolutionTests), DisableParallelization = true)]
 public class SolutionTests
 {
     [Fact]

@@ -11,6 +11,8 @@
   <ItemGroup>
     <None Include="..\..\algorithms\warmup\solve-me-first\*.md" Link="Algorithms\Warmup\SolveMeFirst\%(FileName)%(Extension)" />
     <SolveMeFirst Include="Algorithms\Warmup\SolveMeFirst\*.*" />
+    <None Include="..\..\algorithms\warmup\simple-array-sum\*.md" Link="Algorithms\Warmup\SimpleArraySum\%(FileName)%(Extension)" />
+    <SimpleArraySum Include="Algorithms\Warmup\SimpleArraySum\*.*" />
 
     <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
@@ -20,6 +22,8 @@
     <Message Text="Executing CopyFilesToHackerRankSrcFolders task" Importance="High" />
 
     <Copy SourceFiles="@(SolveMeFirst)" DestinationFolder="..\..\algorithms\warmup\solve-me-first" />
+    <Copy SourceFiles="@(SimpleArraySum)" DestinationFolder="..\..\algorithms\warmup\simple-array-sum" />
+
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />

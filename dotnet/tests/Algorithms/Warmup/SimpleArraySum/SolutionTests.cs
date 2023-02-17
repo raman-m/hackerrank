@@ -1,6 +1,6 @@
-﻿using RamanM.HackerRank.Algorithms.Implementation.SalesByMatch;
+﻿using RamanM.HackerRank.Algorithms.Warmup.SimpleArraySum;
 
-namespace RamanM.HackerRank.Tests.Algorithms.Implementation.SalesByMatch;
+namespace RamanM.HackerRank.Tests.Algorithms.Warmup.SimpleArraySum;
 
 [Collection(nameof(SolutionTests))]
 public class SolutionTests : ConsoleTest
@@ -8,14 +8,14 @@ public class SolutionTests : ConsoleTest
     private readonly string nl = Environment.NewLine;
 
     [Fact]
-    public void Main_Example_ReturnsTwoPairs()
+    public void Main_Example_ReturnsSum()
     {
         // Arrange
-        var stdin = $"7{nl}1 2 1 2 1 3 2";
-        var expected = "2" + nl;
+        var stdin = $"3{nl}1 2 3";
+        var expected = "6" + nl;
         var outputPath = SetupOutput();
 
-        // Act TODO Implement call of private class via reflection
+        // Act
         Act(() => Solution.Main(Array.Empty<string>()),
             stdin);
 
@@ -25,14 +25,14 @@ public class SolutionTests : ConsoleTest
     }
 
     [Fact]
-    public void Main_Sample_ReturnsThreePairs()
+    public void Main_Sample_ReturnsSum()
     {
         // Arrange
-        var stdin = $"9{nl}10 20 20 10 10 30 50 10 20";
-        var expected = "3" + nl;
+        var stdin = $"6{nl}1 2 3 4 10 11";
+        var expected = "31" + nl;
         var outputPath = SetupOutput();
 
-        // Act TODO Implement call of private class via reflection
+        // Act
         Act(() => Solution.Main(Array.Empty<string>()),
             stdin);
 
