@@ -13,6 +13,8 @@
     <SolveMeFirst Include="Algorithms\Warmup\SolveMeFirst\*.*" />
     <None Include="..\..\algorithms\warmup\simple-array-sum\*.md" Link="Algorithms\Warmup\SimpleArraySum\%(FileName)%(Extension)" />
     <SimpleArraySum Include="Algorithms\Warmup\SimpleArraySum\*.*" />
+    <None Include="..\..\algorithms\warmup\compare-the-triplets\*.md" Link="Algorithms\Warmup\CompareTheTriplets\%(FileName)%(Extension)" />
+    <CompareTheTriplets Include="Algorithms\Warmup\CompareTheTriplets\*.*" />
 
     <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
@@ -23,6 +25,7 @@
 
     <Copy SourceFiles="@(SolveMeFirst)" DestinationFolder="..\..\algorithms\warmup\solve-me-first" />
     <Copy SourceFiles="@(SimpleArraySum)" DestinationFolder="..\..\algorithms\warmup\simple-array-sum" />
+    <Copy SourceFiles="@(CompareTheTriplets)" DestinationFolder="..\..\algorithms\warmup\compare-the-triplets" />
 
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
 
