@@ -23,7 +23,7 @@ Return the integer sum of the elements in the array.
 
 #### Constraints
 - $1 \leq n \leq 10$
-- $0 \leq ar[i] \leq 10^10$
+- $0 \leq ar[i] \leq 10^{10}$
 
 #### Sample Input
 ```text
