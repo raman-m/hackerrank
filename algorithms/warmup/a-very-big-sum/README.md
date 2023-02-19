@@ -22,8 +22,12 @@ The next line contains _**n**_ space-separated integers contained in the array.
 Return the integer sum of the elements in the array.
 
 #### Constraints
-- $1 \leq n \leq 10$
-- $0 \leq ar[i] \leq 10^{10}$
+```math
+\begin{flalign}
+& 1 \leq n \leq 10 \\
+& 0 \leq ar[i] \leq 10^{10} &
+\end{flalign}
+```
 
 #### Sample Input
 ```text
