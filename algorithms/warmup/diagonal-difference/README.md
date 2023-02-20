@@ -5,7 +5,7 @@
 ### Problem
 Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 
-For example, the square matrix  is shown below:
+For example, the square matrix **arr** is shown below:
 ```
 1 2 3
 4 5 6
@@ -27,7 +27,7 @@ The first line contains a single integer, _**n**_, the number of rows and column
 Each of the next _**n**_ lines describes a row, _**arr[i]**_, and consists of _**n**_ space-separated integers _**arr[i][j]**_.
 
 #### Constraints
-- $ -100 \leq arr[i][j] \leq 100 $
+- $-100 \leq arr[i][j] \leq 100$
 
 #### Output Format
 Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
@@ -61,6 +61,7 @@ The secondary diagonal is:
 10 .  . 
 ```
 Sum across the secondary diagonal: 4 + 5 + 10 = 19
+
 Difference: |4 - 19| = 15
 
 #### Note:
