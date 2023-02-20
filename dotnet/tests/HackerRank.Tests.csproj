@@ -32,6 +32,7 @@
     <Content Include="..\..\algorithms\warmup\simple-array-sum\testcases\**\*.*" Link="Algorithms\Warmup\SimpleArraySum\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\compare-the-triplets\testcases\**\*.*" Link="Algorithms\Warmup\CompareTheTriplets\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\a-very-big-sum\testcases\**\*.*" Link="Algorithms\Warmup\AVeryBigSum\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\warmup\diagonal-difference\testcases\**\*.*" Link="Algorithms\Warmup\DiagonalDifference\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
     <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>

@@ -17,6 +17,8 @@
     <CompareTheTriplets Include="Algorithms\Warmup\CompareTheTriplets\*.*" />
     <None Include="..\..\algorithms\warmup\a-very-big-sum\*.md" Link="Algorithms\Warmup\AVeryBigSum\%(FileName)%(Extension)" />
     <AVeryBigSum Include="Algorithms\Warmup\AVeryBigSum\*.*" />
+    <None Include="..\..\algorithms\warmup\diagonal-difference\*.md" Link="Algorithms\Warmup\DiagonalDifference\%(FileName)%(Extension)" />
+    <DiagonalDifference Include="Algorithms\Warmup\DiagonalDifference\*.*" />
 
     <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
@@ -29,6 +31,7 @@
     <Copy SourceFiles="@(SimpleArraySum)" DestinationFolder="..\..\algorithms\warmup\simple-array-sum" />
     <Copy SourceFiles="@(CompareTheTriplets)" DestinationFolder="..\..\algorithms\warmup\compare-the-triplets" />
     <Copy SourceFiles="@(AVeryBigSum)" DestinationFolder="..\..\algorithms\warmup\a-very-big-sum" />
+    <Copy SourceFiles="@(DiagonalDifference)" DestinationFolder="..\..\algorithms\warmup\diagonal-difference" />
 
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
 
