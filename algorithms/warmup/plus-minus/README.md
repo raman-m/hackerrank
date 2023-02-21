@@ -10,9 +10,9 @@ Print the decimal value of each fraction on a new line with **6** places after t
 though answers with absolute error of up to **10<sup>-4</sup>** are acceptable.
 
 #### Example
-$arr = [1, 1, 0, -1, -1]$
+$arr = [1, 1, 0, -1, -1]$ <br/>
 There are **n = 5** elements, two positive, two negative and one zero. 
-Their ratios are $\frac{2}{5} = 0.400000, \frac{2}{5} = 0.400000$ and $\frac{1}{5} = 0.200000$.
+Their ratios are $\frac{2}{5} = 0.400000$, $\frac{2}{5} = 0.400000$ and $\frac{1}{5} = 0.200000$.
 Results are printed as:
 ```
 0.400000
@@ -63,6 +63,6 @@ STDIN           Function
 ```
 
 #### Explanation
-There are **3** positive numbers, **2** negative numbers, and **1** zero in the array.
+There are **3** positive numbers, **2** negative numbers, and **1** zero in the array.<br/>
 The proportions of occurrence are positive: $\frac{3}{6} = 0.500000$, 
 negative: $\frac{2}{6} = 0.333333$ and zeros: $\frac{1}{6} = 0.166667$.
