@@ -2,7 +2,7 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Warmup.DiagonalDifference;
 
-[Collection(nameof(TestCases))]
+[Collection(nameof(Console))]
 public class TestCases : TestCase
 {
     [Theory]

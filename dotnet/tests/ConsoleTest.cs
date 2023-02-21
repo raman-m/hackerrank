@@ -4,6 +4,11 @@ namespace RamanM.HackerRank.Tests;
 
 public class ConsoleTest
 {
+    /// <summary>
+    /// Returns the <see cref="Environment.NewLine"/> value.
+    /// </summary>
+    protected string nl = Environment.NewLine;
+
     public Stream GetStringStream(string text)
     {
         byte[] bytes = Encoding.ASCII.GetBytes(text);

@@ -2,11 +2,9 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Warmup.DiagonalDifference;
 
-[Collection(nameof(SolutionTests))]
+[Collection(nameof(Console))]
 public class SolutionTests : ConsoleTest
 {
-    private readonly string nl = Environment.NewLine;
-
     [Fact]
     public void Main_Example_ReturnsMatrixModule()
     {

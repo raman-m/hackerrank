@@ -2,7 +2,7 @@
 
 namespace RamanM.HackerRank.Tests.Algorithms.Implementation.SalesByMatch;
 
-[Collection(nameof(TestCases))]
+[Collection(nameof(Console))]
 public class TestCases : TestCase
 {
     [Theory]
