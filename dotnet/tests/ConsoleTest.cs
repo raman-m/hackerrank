@@ -86,6 +86,31 @@ public class ConsoleTest
         }
     }
 
+    public virtual void ActOnOutput(Action action, TextWriter output)
+    {
+        try
+        {
+            Console.SetOut(output); // Redirect standard output from the console to the output file.                        
+            action?.Invoke(); // Act
+        }
+        finally
+        {
+            var standardOutput = new StreamWriter(Console.OpenStandardOutput());
+            standardOutput.AutoFlush = true;
+            Console.SetOut(standardOutput); // Recover the standard output stream 
+        }
+    }
+
+    public virtual string Act(Action action, [CallerMemberName] string testName = null)
+    {
+        var outputPath = Setup(testName);
+        using (var writer = new StreamWriter(outputPath))
+        {
+            ActOnOutput(action, writer);
+        }
+        return Actual(outputPath);
+    }
+
     /// <summary>
     /// Acts on the specified action using <see cref="Console"/> In/Out streams overriding.
     /// </summary>
@@ -100,6 +125,15 @@ public class ConsoleTest
         ActInConsole(action, stream);
     }
 
+    public virtual string ActOnOutput(Action action, string stdin, [CallerMemberName] string testName = null)
+    {
+        var outputPath = SetupOutput();
+
+        Act(action, stdin: stdin, testName: testName);
+
+        return Actual(outputPath);
+    }
+
     /// <summary>
     /// Setups integration test and sets environment variable using file path of test result.
     /// </summary>
@@ -111,22 +145,32 @@ public class ConsoleTest
     {
         if (string.IsNullOrEmpty(envVarValue))
         {
-            var rootNamespace = typeof(ConsoleTest).Namespace;
-            var relativePath = GetType().Namespace
-                .Remove(0, rootNamespace.Length)
-                .Remove(0, 1).Replace('.', '\\');
-            var basePath = Path.Combine(Environment.CurrentDirectory, relativePath);
-
-            var timeStamp = DateTime.Now.TimeOfDay.ToString().Replace(":", string.Empty);
-            var file = $"{testName}_{timeStamp}.txt";
-            envVarValue = Path.Combine(basePath, file);
+            envVarValue = GetTempFile(testName);
         }
         Environment.SetEnvironmentVariable(environmentVar, envVarValue);
         return envVarValue;
     }
 
-    public string Actual(string outputPath)
+    public string Setup([CallerMemberName] string testName = null)
+    {
+        return GetTempFile(testName);
+    }
+
+    public virtual string Actual(string outputPath)
     {
         return File.ReadAllText(outputPath);
+    }
+
+    protected string GetTempFile(string testName)
+    {
+        var rootNamespace = typeof(ConsoleTest).Namespace;
+        var relativePath = GetType().Namespace
+            .Remove(0, rootNamespace.Length)
+            .Remove(0, 1).Replace('.', '\\');
+        var basePath = Path.Combine(Environment.CurrentDirectory, relativePath);
+
+        var timeStamp = DateTime.Now.TimeOfDay.ToString().Replace(":", string.Empty);
+        var file = $"{testName}_{timeStamp}.txt";
+        return Path.Combine(basePath, file);
     }
 }

@@ -11,14 +11,11 @@ public class SolutionTests : ConsoleTest
         // Arrange
         var stdin = $"3{nl}1 2 3";
         var expected = "6" + nl;
-        var outputPath = SetupOutput();
 
         // Act
-        Act(() => Solution.Main(Array.Empty<string>()),
-            stdin);
+        var actual = ActOnOutput(() => Solution.Main(Array.Empty<string>()), stdin);
 
         // Assert
-        var actual = Actual(outputPath);
         Assert.Equal(expected, actual);
     }
 
@@ -28,14 +25,11 @@ public class SolutionTests : ConsoleTest
         // Arrange
         var stdin = $"6{nl}1 2 3 4 10 11";
         var expected = "31" + nl;
-        var outputPath = SetupOutput();
 
         // Act
-        Act(() => Solution.Main(Array.Empty<string>()),
-            stdin);
+        var actual = ActOnOutput(() => Solution.Main(Array.Empty<string>()), stdin);
 
         // Assert
-        var actual = Actual(outputPath);
         Assert.Equal(expected, actual);
     }
 }
