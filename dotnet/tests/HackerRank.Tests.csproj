@@ -35,6 +35,7 @@
     <Content Include="..\..\algorithms\warmup\diagonal-difference\testcases\**\*.*" Link="Algorithms\Warmup\DiagonalDifference\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\plus-minus\testcases\**\*.*" Link="Algorithms\Warmup\PlusMinus\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\staircase\testcases\**\*.*" Link="Algorithms\Warmup\Staircase\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\warmup\mini-max-sum\testcases\**\*.*" Link="Algorithms\Warmup\MiniMaxSum\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
     <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
