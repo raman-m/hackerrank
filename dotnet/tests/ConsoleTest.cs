@@ -9,29 +9,6 @@ public class ConsoleTest
     /// </summary>
     protected string nl = Environment.NewLine;
 
-    public Stream GetStringStream(string text)
-    {
-        byte[] bytes = Encoding.ASCII.GetBytes(text);
-        return new MemoryStream(bytes);
-    }
-
-    /// <summary>
-    /// Acts on the specified action using <see cref="Console"/> In/Out streams overriding.
-    /// </summary>
-    /// <remarks>
-    /// <see cref="Console"/> usage: input (overridden via a stream), output (overridden via file environment variable)
-    /// </remarks>
-    /// <param name="action">'System Under Test' action.</param>
-    /// <param name="input">A stream to set to <see cref="Console.In"/>.</param>
-    public void ActInConsole(Action action, Stream input)
-    {
-        using (var reader = new StreamReader(input))
-        {
-            Console.SetIn(reader); // Redirect standard input from the console to the input stream.
-            action?.Invoke(); // Act
-        }
-    }
-
     /// <summary>
     /// Acts on the specified action using <see cref="Console"/> In/Out streams overriding.
     /// </summary>
@@ -86,50 +63,44 @@ public class ConsoleTest
         }
     }
 
-    public virtual void ActOnOutput(Action action, TextWriter output)
-    {
-        try
-        {
-            Console.SetOut(output); // Redirect standard output from the console to the output file.                        
-            action?.Invoke(); // Act
-        }
-        finally
-        {
-            var standardOutput = new StreamWriter(Console.OpenStandardOutput());
-            standardOutput.AutoFlush = true;
-            Console.SetOut(standardOutput); // Recover the standard output stream 
-        }
-    }
-
     public virtual string Act(Action action, [CallerMemberName] string testName = null)
     {
         var outputPath = Setup(testName);
         using (var writer = new StreamWriter(outputPath))
         {
-            ActOnOutput(action, writer);
+            try
+            {
+                Console.SetOut(writer); // Redirect standard output from the console to the output file.                        
+                action?.Invoke(); // Act
+            }
+            finally
+            {
+                var standardOutput = new StreamWriter(Console.OpenStandardOutput());
+                standardOutput.AutoFlush = true;
+                Console.SetOut(standardOutput); // Recover the standard output stream 
+            }
         }
         return Actual(outputPath);
     }
 
-    /// <summary>
-    /// Acts on the specified action using <see cref="Console"/> In/Out streams overriding.
-    /// </summary>
-    /// <remarks>
-    /// <see cref="Console"/> usage: input (overridden via string stream), output (overridden via file environment variable)
-    /// </remarks>
-    /// <param name="action">'System Under Test' action.</param>
-    /// <param name="stdin">String data for <see cref="Console.In"/>.</param>
-    public virtual void Act(Action action, string stdin, [CallerMemberName] string testName = null)
+    public virtual string Act(Action action, byte[] stdin, [CallerMemberName] string testName = null)
     {
-        using var stream = GetStringStream(stdin);
-        ActInConsole(action, stream);
+        using var stream = new MemoryStream(stdin);
+        using var reader = new StreamReader(stream);
+        Console.SetIn(reader); // Redirect standard input from the console to the input stream.
+        return Act(action, testName: testName);
     }
 
-    public virtual string ActOnOutput(Action action, string stdin, [CallerMemberName] string testName = null)
+    public string ActOnOutput(Action action, string stdin, [CallerMemberName] string testName = null)
     {
-        var outputPath = SetupOutput();
+        var outputPath = SetupOutputVariable(testName: testName);
 
-        Act(action, stdin: stdin, testName: testName);
+        byte[] bytes = Encoding.ASCII.GetBytes(stdin);
+        using var stream = new MemoryStream(bytes);
+        using var reader = new StreamReader(stream);
+
+        Console.SetIn(reader); // Redirect standard input from the console to the input stream.
+        action?.Invoke(); // Act
 
         return Actual(outputPath);
     }
@@ -141,7 +112,7 @@ public class ConsoleTest
     /// <param name="environmentVar">Name of the environment variable.</param>
     /// <param name="testName">Method name of the running test.</param>
     /// <returns>Environment variable value, file path of output.</returns>
-    public string SetupOutput(string envVarValue = null, string environmentVar = "OUTPUT_PATH", [CallerMemberName] string testName = null)
+    public string SetupOutputVariable(string envVarValue = null, string environmentVar = "OUTPUT_PATH", [CallerMemberName] string testName = null)
     {
         if (string.IsNullOrEmpty(envVarValue))
         {
@@ -151,7 +122,7 @@ public class ConsoleTest
         return envVarValue;
     }
 
-    public string Setup([CallerMemberName] string testName = null)
+    public virtual string Setup([CallerMemberName] string testName = null)
     {
         return GetTempFile(testName);
     }
@@ -166,7 +137,7 @@ public class ConsoleTest
         var rootNamespace = typeof(ConsoleTest).Namespace;
         var relativePath = GetType().Namespace
             .Remove(0, rootNamespace.Length)
-            .Remove(0, 1).Replace('.', '\\');
+            .Remove(0, 1).Replace('.', Path.DirectorySeparatorChar);
         var basePath = Path.Combine(Environment.CurrentDirectory, relativePath);
 
         var timeStamp = DateTime.Now.TimeOfDay.ToString().Replace(":", string.Empty);

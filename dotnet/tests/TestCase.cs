@@ -7,12 +7,12 @@ public class TestCase : ConsoleTest
     private const string testCaseDir = "testcases";
     private string basePath = string.Empty;
 
-    public string Setup(string code)
+    public override string Setup(string code)
     {
         var rootNamespace = typeof(Root).Namespace;
         var relativePath = GetType().Namespace
             .Remove(0, rootNamespace.Length)
-            .Remove(0, 1).Replace('.', '\\');
+            .Remove(0, 1).Replace('.', Path.DirectorySeparatorChar);
         var basePath = Path.Combine(Environment.CurrentDirectory, relativePath);
 
         if (!Directory.Exists(basePath))
@@ -24,11 +24,12 @@ public class TestCase : ConsoleTest
 
         this.basePath = basePath;
 
-        InputPath = $"input\\input{code}.txt";
-        OutputPath = $"output\\output{code}.txt";
+        InputPath = $"input{Path.DirectorySeparatorChar}input{code}.txt";
+        OutputPath = $"output{Path.DirectorySeparatorChar}output{code}.txt";
 
         // Read expected value
-        return File.ReadAllText(OutputPath);
+        var lines = File.ReadLines(OutputPath, Encoding.ASCII);
+        return string.Join(Environment.NewLine, lines);
     }
 
     private string _inputFile;
@@ -96,17 +97,21 @@ public class TestCase : ConsoleTest
     /// </remarks>
     /// <param name="action">SUT action</param>
     /// <returns>Expected value as string.</returns>
-    public string Act(Action action, [CallerMemberName] string testName = null)
+    public override string Act(Action action, [CallerMemberName] string testName = null)
     {
-        SetupOutput(TestResultPath, testName: testName);
+        SetupOutputVariable(TestResultPath, testName: testName);
         ActInConsole(action, InputPath);
         return Actual();
     }
 
-    public string ActInConsole(Action action)
+    public string Act(Action action, bool useOutput, [CallerMemberName] string testName = null)
     {
-        ActInConsole(action, InputPath, TestResultPath);
-        return Actual();
+        if (useOutput)
+        {
+            ActInConsole(action, InputPath, TestResultPath);
+            return Actual();
+        }
+        return Act(action, testName: testName);
     }
 
     private string Actual()

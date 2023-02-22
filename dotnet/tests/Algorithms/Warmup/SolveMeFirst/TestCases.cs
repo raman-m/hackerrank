@@ -14,7 +14,7 @@ public class TestCases : TestCase
         var expected = Setup(code);
 
         // Act
-        var actual = ActInConsole(() => Solution.Main(Array.Empty<string>()));
+        var actual = Act(() => Solution.Main(Array.Empty<string>()), true);
 
         // Assert
         Assert.Equal(expected, actual);
