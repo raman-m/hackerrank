@@ -21,6 +21,8 @@
     <DiagonalDifference Include="Algorithms\Warmup\DiagonalDifference\*.*" />
     <None Include="..\..\algorithms\warmup\plus-minus\*.md" Link="Algorithms\Warmup\PlusMinus\%(FileName)%(Extension)" />
     <PlusMinus Include="Algorithms\Warmup\PlusMinus\*.*" />
+    <None Include="..\..\algorithms\warmup\staircase\*.md" Link="Algorithms\Warmup\Staircase\%(FileName)%(Extension)" />
+    <Staircase Include="Algorithms\Warmup\Staircase\*.*" />
 
     <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
@@ -35,6 +37,7 @@
     <Copy SourceFiles="@(AVeryBigSum)" DestinationFolder="..\..\algorithms\warmup\a-very-big-sum" />
     <Copy SourceFiles="@(DiagonalDifference)" DestinationFolder="..\..\algorithms\warmup\diagonal-difference" />
     <Copy SourceFiles="@(PlusMinus)" DestinationFolder="..\..\algorithms\warmup\plus-minus" />
+    <Copy SourceFiles="@(Staircase)" DestinationFolder="..\..\algorithms\warmup\staircase" />
 
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
 
