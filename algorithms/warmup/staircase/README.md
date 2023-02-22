@@ -3,7 +3,7 @@
 # Staircase
 
 ### Problem
-Staircase detail
+Staircase detail<br/>
 This is a staircase of size **n = 4**:
 ```
    #
@@ -30,7 +30,8 @@ A single integer, _**n**_, denoting the size of the staircase.
 $0 \lt n \leq 100$ .
 
 #### Output Format
-Print a staircase of size _**n**_ using `#` symbols and spaces.<br/>
+Print a staircase of size _**n**_ using `#` symbols and spaces.
+
 **Note**: The last line must have **0** spaces in it.
 
 #### Sample Input
