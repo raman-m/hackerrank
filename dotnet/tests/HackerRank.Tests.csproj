@@ -37,6 +37,7 @@
     <Content Include="..\..\algorithms\warmup\staircase\testcases\**\*.*" Link="Algorithms\Warmup\Staircase\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\mini-max-sum\testcases\**\*.*" Link="Algorithms\Warmup\MiniMaxSum\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\warmup\birthday-cake-candles\testcases\**\*.*" Link="Algorithms\Warmup\BirthdayCakeCandles\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\warmup\time-conversion\testcases\**\*.*" Link="Algorithms\Warmup\TimeConversion\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
     <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>

@@ -27,6 +27,8 @@
     <MiniMaxSum Include="Algorithms\Warmup\MiniMaxSum\*.*" />
     <None Include="..\..\algorithms\warmup\birthday-cake-candles\*.md" Link="Algorithms\Warmup\BirthdayCakeCandles\%(FileName)%(Extension)" />
     <BirthdayCakeCandles Include="Algorithms\Warmup\BirthdayCakeCandles\*.*" />
+    <None Include="..\..\algorithms\warmup\time-conversion\*.md" Link="Algorithms\Warmup\TimeConversion\%(FileName)%(Extension)" />
+    <TimeConversion Include="Algorithms\Warmup\TimeConversion\*.*" />
 
     <None Include="..\..\algorithms\implementation\sock-merchant\*.md" Link="Algorithms\Implementation\SalesByMatch\%(FileName)%(Extension)" />
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
@@ -44,6 +46,7 @@
     <Copy SourceFiles="@(Staircase)" DestinationFolder="..\..\algorithms\warmup\staircase" />
     <Copy SourceFiles="@(MiniMaxSum)" DestinationFolder="..\..\algorithms\warmup\mini-max-sum" />
     <Copy SourceFiles="@(BirthdayCakeCandles)" DestinationFolder="..\..\algorithms\warmup\birthday-cake-candles" />
+    <Copy SourceFiles="@(TimeConversion)" DestinationFolder="..\..\algorithms\warmup\time-conversion" />
 
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
 
