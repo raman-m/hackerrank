@@ -20,7 +20,7 @@ Complete the function `birthdayCakeCandles` in the editor below. <br/>
 `int`: the number of candles that are tallest
 
 #### Input Format
-The first line contains a single integer, _**n**_, the size of _**candles[]**_.
+The first line contains a single integer, _**n**_, the size of _**candles[]**_. <br/>
 The second line contains _**n**_ space-separated integers, where each integer _**i**_ describes the height of _**candles[i]**_.
 
 #### Constraints
