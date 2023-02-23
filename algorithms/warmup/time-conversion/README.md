@@ -4,13 +4,14 @@
 
 ### Problem
 Given a time in [**12**-hour AM/PM format](https://en.wikipedia.org/wiki/12-hour_clock), convert it to military (24-hour) time.<br/>
-**Note**: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.<br/>
+**Note**:
+- 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.<br/>
 - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
 
 #### Example
-- **s = '12:01:00PM'**
+- **s = '12:01:00PM'**<br/>
   Return '12:01:00'.
-- **s = '12:01:00AM'**
+- **s = '12:01:00AM'**<br/>
   Return '00:01:00'.
 
 #### Function Description
@@ -19,7 +20,7 @@ Complete the `timeConversion` function in the editor below. It should return a n
 - `string` **s**: a time in **12** hour format
 
 #### Returns
-`string`: the time in 24 hour format
+`string`: the time in **24** hour format
 
 #### Input Format
 A single string _**s**_ that represents a time in **12**-hour clock format (i.e.: **hh:mm:ssAM** or **hh:mm:ssPM**).
