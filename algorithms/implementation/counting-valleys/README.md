@@ -12,12 +12,12 @@ and each step up or down represents a **1** unit change in altitude. We define t
 Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
 
 #### Example
-_**steps = 8 path = [DDUUUUDD]**_
+_**steps = 8 path = [DDUUUUDD]**_ <br/>
 The hiker first enters a valley **2** units deep. Then they climb out and up onto a mountain **2** units high.
 Finally, the hiker returns to sea level and ends the hike.
 
 #### Function Description
-Complete the `countingValleys` function in the editor below.
+Complete the `countingValleys` function in the editor below.<br/>
 `countingValleys` has the following parameter(s):
 - `int` **steps**: the number of steps on the hike
 - `string` **path**: a string describing the path
@@ -31,7 +31,7 @@ The second line contains a single string _**path**_, of _**steps**_ characters t
 
 #### Constraints
 - $2 \leq steps \leq 10^6$
-- $path[i] \in \{UD\}$
+- $path[i] \in \set{UD}$
 
 #### Sample Input
 ```
