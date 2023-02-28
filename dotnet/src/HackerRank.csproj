@@ -34,6 +34,8 @@
     <SalesByMatch Include="Algorithms\Implementation\SalesByMatch\*.*" />
     <None Include="..\..\algorithms\implementation\counting-valleys\*.md" Link="Algorithms\Implementation\CountingValleys\%(FileName)%(Extension)" />
     <CountingValleys Include="Algorithms\Implementation\CountingValleys\*.*" />
+    <None Include="..\..\algorithms\implementation\electronics-shop\*.md" Link="Algorithms\Implementation\ElectronicsShop\%(FileName)%(Extension)" />
+    <ElectronicsShop Include="Algorithms\Implementation\ElectronicsShop\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -52,6 +54,7 @@
 
     <Copy SourceFiles="@(SalesByMatch)" DestinationFolder="..\..\algorithms\implementation\sock-merchant" />
     <Copy SourceFiles="@(CountingValleys)" DestinationFolder="..\..\algorithms\implementation\counting-valleys" />
+    <Copy SourceFiles="@(ElectronicsShop)" DestinationFolder="..\..\algorithms\implementation\electronics-shop" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>

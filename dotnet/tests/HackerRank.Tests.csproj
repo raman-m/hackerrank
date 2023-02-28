@@ -41,6 +41,7 @@
 
     <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\implementation\counting-valleys\testcases\**\*.*" Link="Algorithms\Implementation\CountingValleys\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\implementation\electronics-shop\testcases\**\*.*" Link="Algorithms\Implementation\ElectronicsShop\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
