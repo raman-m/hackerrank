@@ -40,6 +40,7 @@
     <Content Include="..\..\algorithms\warmup\time-conversion\testcases\**\*.*" Link="Algorithms\Warmup\TimeConversion\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
     <Content Include="..\..\algorithms\implementation\sock-merchant\testcases\**\*.*" Link="Algorithms\Implementation\SalesByMatch\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\implementation\counting-valleys\testcases\**\*.*" Link="Algorithms\Implementation\CountingValleys\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
