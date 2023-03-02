@@ -41,20 +41,20 @@ _**y**_ (cat _**B**_'s location), and _**z**_ (mouse _**C**_'s location).
 - $1 \leq q \leq 100$
 - $1 \leq x, y, z \leq 100$
 
-#### Sample Input 0
+#### Sample Input
 ```
 2
 1 2 3
 1 3 2
 ```
 
-#### Sample Output 0
+#### Sample Output
 ```
 Cat B
 Mouse C
 ```
 
-#### Explanation 0
+#### Explanation
 **Query 0**: The positions of the cats and mouse are shown below:<br/>
 ![cat.png](https://s3.amazonaws.com/hr-challenge-images/0/1480434477-7418fccf34-cat.png) <br/>
 Cat **B** will catch the mouse first, so we print `Cat B` on a new line.
