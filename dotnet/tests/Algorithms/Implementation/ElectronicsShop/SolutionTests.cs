@@ -7,13 +7,13 @@ public class SolutionGetMoneySpentTests
     [Fact]
     public void GetMoneySpent_Example_ReturnsFiftyEight()
     {
-        //  Act
+        // Arrange
         const int budget = 60, n = 3, m = 3;
         var keyboards = new int[n] { 40, 50, 60 };
         var drives = new int[m] { 5, 8, 12 };
         const int fiftyEight = 58;
 
-        // Arrange
+        // Act
         int actual = Solution.getMoneySpent(keyboards, drives, budget);
 
         // Assert
@@ -23,13 +23,13 @@ public class SolutionGetMoneySpentTests
     [Fact]
     public void GetMoneySpent_Sample0_ReturnsNine()
     {
-        //  Act
+        // Arrange
         const int budget = 10, n = 2, m = 3;
         var keyboards = new int[n] { 3, 1 };
         var drives = new int[m] { 5, 2, 8 };
         const int nine = 9;
 
-        // Arrange
+        // Act
         int actual = Solution.getMoneySpent(keyboards, drives, budget);
 
         // Assert
@@ -39,13 +39,13 @@ public class SolutionGetMoneySpentTests
     [Fact]
     public void GetMoneySpent_Sample1_ReturnsNothing()
     {
-        //  Act
+        // Arrange
         const int budget = 5, n = 1, m = 1;
         var keyboards = new int[n] { 4 };
         var drives = new int[m] { 5 };
         const int nothing = -1;
 
-        // Arrange
+        // Act
         int actual = Solution.getMoneySpent(keyboards, drives, budget);
 
         // Assert
@@ -63,7 +63,7 @@ public class SolutionTests : ConsoleTest
         var stdin = $"60 3 3{nl}40 50 60{nl}5 8 12";
         var fiftyEight = "58" + nl;
 
-        // Arrange
+        // Act
         var actual = ActOnOutput(() => Solution.Main(Array.Empty<string>()), stdin);
 
         // Assert
