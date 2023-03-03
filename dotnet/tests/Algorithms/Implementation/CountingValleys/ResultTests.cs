@@ -7,12 +7,12 @@ public class ResultTests
     [Fact]
     public void CountingValleys_Example_ReturnsOneValley()
     {
-        //  Act
+        // Arrange
         const int steps = 8;
         const string path = "DDUUUUDD";
         const int oneValley = 1;
 
-        // Arrange
+        // Act
         int actual = Result.countingValleys(steps, path);
 
         // Assert
@@ -22,12 +22,12 @@ public class ResultTests
     [Fact]
     public void CountingValleys_Sample_ReturnsOneValley()
     {
-        //  Act
+        // Arrange
         const int steps = 8;
         const string path = "UDDDUDUU";
         const int oneValley = 1;
 
-        // Arrange
+        // Act
         int actual = Result.countingValleys(steps, path);
 
         // Assert
@@ -37,12 +37,12 @@ public class ResultTests
     [Fact]
     public void CountingValleys_MountainOnly_ReturnsNoValleys()
     {
-        //  Act
+        // Arrange
         const int steps = 2;
         const string path = "UD";
         const int noValleys = 0;
 
-        // Arrange
+        // Act
         int actual = Result.countingValleys(steps, path);
 
         // Assert
@@ -52,12 +52,12 @@ public class ResultTests
     [Fact]
     public void CountingValleys_OneValleyOnly_ReturnsOneValley()
     {
-        //  Act
+        // Arrange
         const int steps = 2;
         const string path = "DU";
         const int oneValley = 1;
 
-        // Arrange
+        // Act
         int actual = Result.countingValleys(steps, path);
 
         // Assert

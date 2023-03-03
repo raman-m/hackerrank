@@ -12,7 +12,7 @@ public class SolutionTests : ConsoleTest
         var stdin = $"8{nl}DDUUUUDD";
         var oneValley = "1" + nl;
 
-        // Arrange
+        // Act
         var actual = ActOnOutput(() => Solution.Main(Array.Empty<string>()), stdin);
 
         // Assert
