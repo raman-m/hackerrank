@@ -40,6 +40,8 @@
     <CatsAndMouse Include="Algorithms\Implementation\CatsAndMouse\*.*" />
     <None Include="..\..\algorithms\implementation\repeated-string\*.md" Link="Algorithms\Implementation\RepeatedString\%(FileName)%(Extension)" />
     <RepeatedString Include="Algorithms\Implementation\RepeatedString\*.*" />
+    <None Include="..\..\algorithms\implementation\jumping-on-the-clouds\*.md" Link="Algorithms\Implementation\JumpingOnTheClouds\%(FileName)%(Extension)" />
+    <JumpingOnTheClouds Include="Algorithms\Implementation\JumpingOnTheClouds\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -61,6 +63,7 @@
     <Copy SourceFiles="@(ElectronicsShop)" DestinationFolder="..\..\algorithms\implementation\electronics-shop" />
     <Copy SourceFiles="@(CatsAndMouse)" DestinationFolder="..\..\algorithms\implementation\cats-and-a-mouse" />
     <Copy SourceFiles="@(RepeatedString)" DestinationFolder="..\..\algorithms\implementation\repeated-string" />
+    <Copy SourceFiles="@(JumpingOnTheClouds)" DestinationFolder="..\..\algorithms\implementation\jumping-on-the-clouds" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>
