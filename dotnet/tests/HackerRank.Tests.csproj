@@ -43,6 +43,7 @@
     <Content Include="..\..\algorithms\implementation\counting-valleys\testcases\**\*.*" Link="Algorithms\Implementation\CountingValleys\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\implementation\electronics-shop\testcases\**\*.*" Link="Algorithms\Implementation\ElectronicsShop\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\implementation\cats-and-a-mouse\testcases\**\*.*" Link="Algorithms\Implementation\CatsAndMouse\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\implementation\repeated-string\testcases\**\*.*" Link="Algorithms\Implementation\RepeatedString\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
