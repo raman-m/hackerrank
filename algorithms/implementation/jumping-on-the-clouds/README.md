@@ -13,7 +13,7 @@ For each game, you will get an array of clouds numbered **0** if they are safe o
 #### Example
 **_c_ = [0, 1, 0, 0, 0, 1, 0]**<br/>
 Index the array from **0...6**. The number on each cloud is its index in the list so the player must avoid the clouds at indices **1** and **5**.
-They could follow these two paths: **0 -> 2 -> 4 -> 6** or **0 -> 2 -> 3 -> 4 -> 6**. 
+They could follow these two paths: **0 &rarr; 2 &rarr; 4 &rarr; 6** or **0 &rarr; 2 &rarr; 3 &rarr; 4 &rarr; 6**. 
 The first path takes **3** jumps while the second takes **4**. Return **3**.
 
 #### Function Description
@@ -27,12 +27,12 @@ Complete the `jumpingOnClouds` function in the editor below.
 
 #### Input Format
 The first line contains an integer **n**, the total number of clouds.
-The second line contains **n** space-separated binary integers describing clouds **c[i]** where $0 \leq i \lt n$.
+The second line contains **n** space-separated binary integers describing clouds **c[i]** where **0 &le; i &lt; n**.
 
 #### Constraints
 - $2 \leq n \leq 100$
 - $c[i] \in \set{0, 1}$
-- $c[0] = c[n-1] = 0$.
+- $c[0] = c[n-1] = 0$
 
 #### Output Format
 Print the minimum number of jumps needed to win the game.
