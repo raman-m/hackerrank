@@ -29,7 +29,7 @@ The second line contains an integer, **n**.
 #### Constraints
 - $1 \leq |s| \leq 100$
 - $1 \leq n \leq 10^{12}$
-- For $25%$ of the test cases, $n \leq 10^6$.
+- For **25%** of the test cases, $n \leq 10^6$.
 
 #### Sample Input 0
 ```
