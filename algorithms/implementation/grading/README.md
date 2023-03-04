@@ -12,9 +12,10 @@ Sam is a professor at the university and likes to round each student's _**grade*
 - If the value of _**grade**_ is less than **38**, no rounding occurs as the result will still be a failing grade.
 
 #### Example
-**_grade_ = 84** round to **85** (85 - 84 is less than 3)<br/>
-**_grade_ = 29** do not round (result is less than 40)<br/>
-**_grade_ = 57** do not round (60 - 57 is 3 or higher)<br/>
+- **_grade_ = 84** round to **85** (85 - 84 is less than 3)
+- **_grade_ = 29** do not round (result is less than 40)
+- **_grade_ = 57** do not round (60 - 57 is 3 or higher)
+
 Given the initial value of _**grade**_ for each of Sam's **n** students, write code to automate the rounding process.
 
 #### Function Description
