@@ -45,6 +45,7 @@
     <Content Include="..\..\algorithms\implementation\cats-and-a-mouse\testcases\**\*.*" Link="Algorithms\Implementation\CatsAndMouse\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\implementation\repeated-string\testcases\**\*.*" Link="Algorithms\Implementation\RepeatedString\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\algorithms\implementation\jumping-on-the-clouds\testcases\**\*.*" Link="Algorithms\Implementation\JumpingOnTheClouds\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\algorithms\implementation\grading\testcases\**\*.*" Link="Algorithms\Implementation\GradingStudents\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
