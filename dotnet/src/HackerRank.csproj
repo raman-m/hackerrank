@@ -8,7 +8,7 @@
     <RootNamespace>RamanM.HackerRank</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="Algorithms">
     <None Include="..\..\algorithms\warmup\solve-me-first\*.md" Link="Algorithms\Warmup\SolveMeFirst\%(FileName)%(Extension)" />
     <SolveMeFirst Include="Algorithms\Warmup\SolveMeFirst\*.*" />
     <None Include="..\..\algorithms\warmup\simple-array-sum\*.md" Link="Algorithms\Warmup\SimpleArraySum\%(FileName)%(Extension)" />
@@ -46,6 +46,11 @@
     <GradingStudents Include="Algorithms\Implementation\GradingStudents\*.*" />
   </ItemGroup>
 
+  <ItemGroup Label="DataStructures">
+    <None Include="..\..\data-structures\arrays\arrays-ds\*.md" Link="DataStructures\Arrays\ArraysDS\%(FileName)%(Extension)" />
+    <ArraysDS Include="DataStructures\Arrays\ArraysDS\*.*" />
+  </ItemGroup>
+
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
     <Message Text="Executing CopyFilesToHackerRankSrcFolders task" Importance="High" />
 
@@ -67,6 +72,8 @@
     <Copy SourceFiles="@(RepeatedString)" DestinationFolder="..\..\algorithms\implementation\repeated-string" />
     <Copy SourceFiles="@(JumpingOnTheClouds)" DestinationFolder="..\..\algorithms\implementation\jumping-on-the-clouds" />
     <Copy SourceFiles="@(GradingStudents)" DestinationFolder="..\..\algorithms\implementation\grading" />
+
+    <Copy SourceFiles="@(ArraysDS)" DestinationFolder="..\..\data-structures\arrays\arrays-ds" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>
