@@ -29,7 +29,7 @@ public class Result
         if (arr?.Count != Dimension2D || arr.Any(row => row?.Count != Dimension2D))
             return 0;
 
-        int max = 0;
+        int max = int.MinValue;
         for (int i = 0; i <= Dimension2D - 3; i++)
             for (int sum = 0, j = 0; j <= Dimension2D - 3; j++, sum = 0)
             {
