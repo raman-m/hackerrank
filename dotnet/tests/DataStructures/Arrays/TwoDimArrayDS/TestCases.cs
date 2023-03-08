@@ -8,6 +8,7 @@ public class TestCases : TestCase
     [Theory]
     [InlineData("00")]
     [InlineData("01")]
+    [InlineData("03")]
     [InlineData("08")]
     public void Solution_Main_TestCaseXX(string code)
     {
