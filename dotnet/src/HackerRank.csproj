@@ -49,6 +49,8 @@
   <ItemGroup Label="DataStructures">
     <None Include="..\..\data-structures\arrays\arrays-ds\*.md" Link="DataStructures\Arrays\ArraysDS\%(FileName)%(Extension)" />
     <ArraysDS Include="DataStructures\Arrays\ArraysDS\*.*" />
+    <None Include="..\..\data-structures\arrays\2d-array\*.md" Link="DataStructures\Arrays\TwoDimArrayDS\%(FileName)%(Extension)" />
+    <TwoDimArrayDS Include="DataStructures\Arrays\TwoDimArrayDS\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -74,6 +76,7 @@
     <Copy SourceFiles="@(GradingStudents)" DestinationFolder="..\..\algorithms\implementation\grading" />
 
     <Copy SourceFiles="@(ArraysDS)" DestinationFolder="..\..\data-structures\arrays\arrays-ds" />
+    <Copy SourceFiles="@(TwoDimArrayDS)" DestinationFolder="..\..\data-structures\arrays\2d-array" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>
