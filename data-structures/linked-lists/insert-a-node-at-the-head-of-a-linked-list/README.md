@@ -45,8 +45,8 @@ The next **n** lines contain an integer each, the elements to be inserted, one p
 ```
 
 #### Explanation
-Initially the list is **NULL**. After inserting **383**, the list is **383 &rarr; NULL**.
-After inserting **484**, the list is **484 &rarr; 383 &rarr; NULL**.
-After inserting **392**, the list is **392 &rarr; 484 &rarr; 383 &rarr; NULL**.
-After inserting **975**, the list is **975 &rarr; 392 &rarr; 484 &rarr; 383 &rarr; NULL**.
+Initially the list is **NULL**. After inserting **383**, the list is **383 &rarr; NULL**.<br/>
+After inserting **484**, the list is **484 &rarr; 383 &rarr; NULL**.<br/>
+After inserting **392**, the list is **392 &rarr; 484 &rarr; 383 &rarr; NULL**.<br/>
+After inserting **975**, the list is **975 &rarr; 392 &rarr; 484 &rarr; 383 &rarr; NULL**.<br/>
 After inserting **321**, the list is **321 &rarr; 975 &rarr; 392 &rarr; 484 &rarr; 383 &rarr; NULL**.
