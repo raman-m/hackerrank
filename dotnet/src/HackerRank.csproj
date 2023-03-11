@@ -54,6 +54,8 @@
 
     <None Include="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\%(FileName)%(Extension)" />
     <PrintTheElementsOfALinkedList Include="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\*.*" />
+    <None Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\%(FileName)%(Extension)" />
+    <InsertANodeAtTheHeadOfALinkedList Include="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -82,6 +84,7 @@
     <Copy SourceFiles="@(TwoDimArrayDS)" DestinationFolder="..\..\data-structures\arrays\2d-array" />
 
     <Copy SourceFiles="@(PrintTheElementsOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list" />
+    <Copy SourceFiles="@(InsertANodeAtTheHeadOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>
