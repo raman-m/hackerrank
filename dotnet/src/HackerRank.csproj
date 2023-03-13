@@ -56,6 +56,9 @@
     <PrintTheElementsOfALinkedList Include="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\*.*" />
     <None Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\%(FileName)%(Extension)" />
     <InsertANodeAtTheHeadOfALinkedList Include="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\*.*" />
+
+    <None Include="..\..\data-structures\trees\tree-preorder-traversal\*.md" Link="DataStructures\Trees\TreePreorderTraversal\%(FileName)%(Extension)" />
+    <TreePreorderTraversal Include="DataStructures\Trees\TreePreorderTraversal\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -85,6 +88,8 @@
 
     <Copy SourceFiles="@(PrintTheElementsOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list" />
     <Copy SourceFiles="@(InsertANodeAtTheHeadOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list" />
+
+    <Copy SourceFiles="@(TreePreorderTraversal)" DestinationFolder="..\..\data-structures\trees\tree-preorder-traversal" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>
