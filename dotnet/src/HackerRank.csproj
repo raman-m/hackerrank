@@ -59,6 +59,8 @@
 
     <None Include="..\..\data-structures\trees\tree-preorder-traversal\*.md" Link="DataStructures\Trees\TreePreorderTraversal\%(FileName)%(Extension)" />
     <TreePreorderTraversal Include="DataStructures\Trees\TreePreorderTraversal\*.*" />
+    <None Include="..\..\data-structures\trees\tree-postorder-traversal\*.md" Link="DataStructures\Trees\TreePostorderTraversal\%(FileName)%(Extension)" />
+    <TreePostorderTraversal Include="DataStructures\Trees\TreePostorderTraversal\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesToHackerRankSrcFolders" AfterTargets="Build">
@@ -90,6 +92,7 @@
     <Copy SourceFiles="@(InsertANodeAtTheHeadOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list" />
 
     <Copy SourceFiles="@(TreePreorderTraversal)" DestinationFolder="..\..\data-structures\trees\tree-preorder-traversal" />
+    <Copy SourceFiles="@(TreePostorderTraversal)" DestinationFolder="..\..\data-structures\trees\tree-postorder-traversal" />
 
     <Message Text="CopyFilesToHackerRankSrcFolders task completed" Importance="High" />
   </Target>

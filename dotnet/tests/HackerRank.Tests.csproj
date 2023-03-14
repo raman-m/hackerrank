@@ -54,6 +54,7 @@
     <Content Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\testcases\**\*.*" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
     <Content Include="..\..\data-structures\trees\tree-preorder-traversal\testcases\**\*.*" Link="DataStructures\Trees\TreePreorderTraversal\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+    <Content Include="..\..\data-structures\trees\tree-postorder-traversal\testcases\**\*.*" Link="DataStructures\Trees\TreePostorderTraversal\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
