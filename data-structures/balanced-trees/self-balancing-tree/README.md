@@ -22,13 +22,13 @@ You are given a pointer to the root of an AVL tree. You need to insert a value i
 
 #### Input Format
 You are given a function,
-```cpp
+```c
 node* insert(node* root, int new_val)
 {
 }
 ```
 `node` is defined as:
-```cpp
+```c
 struct node
 {
    int val;            //value
@@ -63,7 +63,7 @@ The value to be inserted is **6**.
 ```
 
 #### Explanation
-After inserting **6** in the tree. The tree becomes:
+After inserting **6** in the tree, the tree becomes:
 ```
     3 (Balance Factor = -2)
   /  \
