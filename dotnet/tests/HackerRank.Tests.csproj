@@ -50,6 +50,8 @@
     <Content Include="..\..\data-structures\arrays\arrays-ds\testcases\**\*.*" Link="DataStructures\Arrays\ArraysDS\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\data-structures\arrays\2d-array\testcases\**\*.*" Link="DataStructures\Arrays\TwoDimArrayDS\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 
+    <Content Include="..\..\data-structures\balanced-trees\self-balancing-tree\testcases\**\*.*" Link="DataStructures\BalancedTrees\SelfBalancingTree\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
+
     <Content Include="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list\testcases\**\*.*" Link="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
     <Content Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\testcases\**\*.*" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\testcases\%(RecursiveDir)%(FileName)%(Extension)" CopyToOutputDirectory="Always" />
 

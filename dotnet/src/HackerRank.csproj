@@ -52,6 +52,9 @@
     <None Include="..\..\data-structures\arrays\2d-array\*.md" Link="DataStructures\Arrays\TwoDimArrayDS\%(FileName)%(Extension)" />
     <TwoDimArrayDS Include="DataStructures\Arrays\TwoDimArrayDS\*.*" />
 
+    <None Include="..\..\data-structures\balanced-trees\self-balancing-tree\*.md" Link="DataStructures\BalancedTrees\SelfBalancingTree\%(FileName)%(Extension)" />
+    <SelfBalancingTree Include="DataStructures\BalancedTrees\SelfBalancingTree\*.*" />
+
     <None Include="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\%(FileName)%(Extension)" />
     <PrintTheElementsOfALinkedList Include="DataStructures\LinkedLists\PrintTheElementsOfALinkedList\*.*" />
     <None Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\%(FileName)%(Extension)" />
@@ -87,6 +90,8 @@
 
     <Copy SourceFiles="@(ArraysDS)" DestinationFolder="..\..\data-structures\arrays\arrays-ds" />
     <Copy SourceFiles="@(TwoDimArrayDS)" DestinationFolder="..\..\data-structures\arrays\2d-array" />
+
+    <Copy SourceFiles="@(SelfBalancingTree)" DestinationFolder="..\..\data-structures\balanced-trees\self-balancing-tree" />
 
     <Copy SourceFiles="@(PrintTheElementsOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list" />
     <Copy SourceFiles="@(InsertANodeAtTheHeadOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list" />
