@@ -22,9 +22,9 @@ Complete the `getMax` function in the editor below.<br/>
 The first line of input contains an integer, **n**. The next **n** lines each contain an above mentioned query.
 
 #### Constraints
-**1 &le; n &le; 10<sup>5</sup>**<br/>
-**1 &le; x &le; 10<sup>9</sup>**<br/>
-**1 &le; type &le; 3**<br/>
+_**1 &le; n &le; 10<sup>5</sup>**_<br/>
+_**1 &le; x &le; 10<sup>9</sup>**_<br/>
+_**1 &le; type &le; 3**_<br/>
 All queries are valid.
 
 #### Sample Input
