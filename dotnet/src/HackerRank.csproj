@@ -60,6 +60,9 @@
     <None Include="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list\*.md" Link="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\%(FileName)%(Extension)" />
     <InsertANodeAtTheHeadOfALinkedList Include="DataStructures\LinkedLists\InsertANodeAtTheHeadOfALinkedList\*.*" />
 
+    <None Include="..\..\data-structures\stacks\maximum-element\*.md" Link="DataStructures\Stacks\MaximumElement\%(FileName)%(Extension)" />
+    <MaximumElement Include="DataStructures\Stacks\MaximumElement\*.*" />
+
     <None Include="..\..\data-structures\trees\tree-preorder-traversal\*.md" Link="DataStructures\Trees\TreePreorderTraversal\%(FileName)%(Extension)" />
     <TreePreorderTraversal Include="DataStructures\Trees\TreePreorderTraversal\*.*" />
     <None Include="..\..\data-structures\trees\tree-postorder-traversal\*.md" Link="DataStructures\Trees\TreePostorderTraversal\%(FileName)%(Extension)" />
@@ -95,6 +98,8 @@
 
     <Copy SourceFiles="@(PrintTheElementsOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\print-the-elements-of-a-linked-list" />
     <Copy SourceFiles="@(InsertANodeAtTheHeadOfALinkedList)" DestinationFolder="..\..\data-structures\linked-lists\insert-a-node-at-the-head-of-a-linked-list" />
+
+    <Copy SourceFiles="@(MaximumElement)" DestinationFolder="..\..\data-structures\stacks\maximum-element" />
 
     <Copy SourceFiles="@(TreePreorderTraversal)" DestinationFolder="..\..\data-structures\trees\tree-preorder-traversal" />
     <Copy SourceFiles="@(TreePostorderTraversal)" DestinationFolder="..\..\data-structures\trees\tree-postorder-traversal" />
